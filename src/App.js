@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Description from "./components/description.component";
+import {EpisodeList} from "./components/episode-list/episode-list.component";
+
+import data from "./data/en_US.json";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <Description>{data.description}</Description>
+        </div>
       </header>
+      <EpisodeList episodes={data["episode-list"]}>
+      </EpisodeList>
     </div>
   );
 }
