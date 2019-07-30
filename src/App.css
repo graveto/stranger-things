@@ -1,11 +1,18 @@
-.App {
-  text-align: center;
-  background: rgb(62,0,0);
-  background: radial-gradient(circle, rgba(62,0,0,1) 0%, rgba(85,4,4,1) 46%, rgba(121,9,9,1) 71%, rgba(201,4,4,1) 99%, rgba(255,0,0,1) 100%);  
+html { 
+  background: url(./images/rtp.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-.App-header {
-  
+.App {
+  text-align: center;
+  /* background: rgb(62,0,0);
+  background: radial-gradient(circle, rgba(62,0,0,1) 0%, rgba(85,4,4,1) 46%, rgba(121,9,9,1) 71%, rgba(201,4,4,1) 99%, rgba(255,0,0,1) 100%);   */
+}
+
+.App-header {  
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,15 +22,18 @@
   color:white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-header h1 {
+  background-image: url('./images/stranger-things-logo.png');
+  background-repeat: no-repeat;
+  width: 600px;
+  height: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-header h2 {  
+  text-align: right;
+  margin-top: -30px;
+}
+
+.Description {
+  margin-top: 50px;
 }
