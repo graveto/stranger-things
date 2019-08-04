@@ -27,6 +27,12 @@ const Description = props => {
         </div>
         <div>
           <h2>See the Places</h2>
+          <p>Some of the places you may recognize are:</p>
+          <ul>
+            {props.data.locations.map((location, index) => (
+              <li key={index}>{location}</li>
+            ))}
+          </ul>
           <div
             className="video"
             style={{

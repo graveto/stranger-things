@@ -20,7 +20,7 @@
   text-align: left;
 }
 
-.Description section p {
+.Description section p, .Description section li {
   font-size: 1rem;
 }
 
