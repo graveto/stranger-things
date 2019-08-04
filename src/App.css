@@ -17,6 +17,53 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+.App .navbar {
+  padding-left: 50px;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-bottom: 1px solid #FF1515;
+}
+
+.App .navbar ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: table;  
+}
+
+.App .navbar ul li {
+  display: table-cell; 
+  position: relative; 
+  padding: 2rem 0;
+}
+
+.App .navbar ul li a {
+  text-decoration: none;
+  color: #FF1515;
+  font-size: 1.5rem;
+  letter-spacing: 0.15em;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.App .navbar ul li a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: #FF1515;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+.App .navbar ul li a:hover:after { 
+  width: 100%; 
+  left: 0; 
+}
+
 .App-header {  
   min-height: 100vh;
   display: flex;
