@@ -10,8 +10,8 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div>
-          <h1 />
-          <h2>at RTP</h2>
+          <h1>Stranger Things</h1>
+          <h2>at<span> RTP</span></h2>
         </div>
         <div>
           <Description>{data.description}</Description>

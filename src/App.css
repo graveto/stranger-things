@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900i&display=swap');
+
 html { 
   background: url(./images/rtp.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -6,10 +8,13 @@ html {
   background-size: cover;
 }
 
+body {
+  background-color: rgba(25, 25, 25, 0.4);
+}
+
 .App {
   text-align: center;
-  /* background: rgb(62,0,0);
-  background: radial-gradient(circle, rgba(62,0,0,1) 0%, rgba(85,4,4,1) 46%, rgba(121,9,9,1) 71%, rgba(201,4,4,1) 99%, rgba(255,0,0,1) 100%);   */
+  font-family: 'Montserrat', sans-serif;
 }
 
 .App-header {  
@@ -25,15 +30,27 @@ html {
 .App-header h1 {
   background-image: url('./images/stranger-things-logo.png');
   background-repeat: no-repeat;
-  width: 600px;
-  height: 60px;
+  width: 34.375rem;
+  height: 3.75rem;
+  text-indent: -10000px;
 }
 
 .App-header h2 {  
   text-align: right;
-  margin-top: -30px;
+  margin-top: -2rem;
+  color: #FF1515;
 }
 
-.Description {
-  margin-top: 50px;
+.App-header h2 span {
+  font-weight: 900;
+  font-style: italic; 
 }
+
+.App-header h3 {
+  line-height: 3rem;
+  font-size: 1.5rem;
+}
+
+
+
+
