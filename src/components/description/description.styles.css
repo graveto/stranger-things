@@ -1,23 +1,23 @@
 .Description {
-    margin-top: 1.5rem;
-    text-align: left;
-    color: white;
-    padding: 0 100px;
-    width: 75vw;
-  }
-  
-  .Description strong {
-    color: #FF1515;
-  }
+  margin-top: 1.5rem;
+  text-align: left;
+  color: white;
+  padding: 0 100px;
+  width: 75vw;
+}
 
-  .Description a {
-      padding: 1rem;
-      background-color: #e99b5a;
-      color: #1f2727;
-      text-decoration: none;
-  }
+.Description strong {
+  color: #ff1515;
+}
 
-  .Description a:hover {
-    background-color: #1f2727;
-    color: #e99b5a;
+.Description a {
+  padding: 1rem;
+  background-color: #e99b5a;
+  color: #1f2727;
+  text-decoration: none;
+}
+
+.Description a:hover {
+  background-color: #1f2727;
+  color: #e99b5a;
 }

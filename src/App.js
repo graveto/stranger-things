@@ -17,7 +17,7 @@ function App() {
       <header className="App-header">
         <div>
           <h1>Stranger Things</h1>
-          <h2>at<span> RTP</span></h2>
+          <h2>at <span>RTP</span></h2>
         </div>
         <div>
           <Description>{data.description}</Description>
