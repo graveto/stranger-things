@@ -1,7 +1,7 @@
 import React from "react";
 import "./episode-detail.styles.css";
 
-function EpisodeDetail(props) {
+const EpisodeDetail = props => {
   return (
     <div className="episode-container">
       <div>

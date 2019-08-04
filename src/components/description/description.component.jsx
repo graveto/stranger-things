@@ -1,7 +1,7 @@
 import React from "react";
 import "./description.styles.css"
 
-function Description(props) {
+const Description = props => {
   return (
     <div className="Description">
       <h3>

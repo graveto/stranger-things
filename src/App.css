@@ -64,39 +64,7 @@ body {
   left: 0; 
 }
 
-.App-header {  
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color:white;
-}
 
-.App-header h1 {
-  background-image: url('./images/stranger-things-logo.png');
-  background-repeat: no-repeat;
-  width: 34.375rem;
-  height: 3.75rem;
-  text-indent: -10000px;
-}
-
-.App-header h2 {  
-  text-align: right;
-  margin-top: -2rem;
-  color: #FF1515;
-}
-
-.App-header h2 span {
-  font-weight: 900;
-  font-style: italic; 
-}
-
-.App-header h3 {
-  line-height: 3rem;
-  font-size: 1.5rem;
-}
 
 
 

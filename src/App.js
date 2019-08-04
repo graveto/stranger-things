@@ -1,10 +1,13 @@
 import React from "react";
-import "./App.css";
-import Description from "./components/description/description.component";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { EpisodeList } from "./components/episode-list/episode-list.component";
+import "./App.css";
+import EpisodeList from "./components/episode-list/episode-list.component";
+import Header from "./components/header/header.component.jsx";
 
-import data from "./data/en_US.json";
+import data1 from "./data/en_US.json";
+import data2 from "./data/la_PG.json";
+
+let data = data2;
 
 function App() {
   return (
@@ -12,25 +15,8 @@ function App() {
       <div className="App">
         <Route exact path="/" component={Home} />
         <Route path="/popularepisodes" component={PopularEpisodes} />
-        {/*<Route path="/topics" component={Topics} />*/}
       </div>
     </Router>
-  );
-}
-
-function Header() {
-  return (
-    <header className="App-header">
-      <div>
-        <h1>Stranger Things</h1>
-        <h2>
-          at <span>RTP</span>
-        </h2>
-      </div>
-      <div>
-        <Description>{data.description}</Description>
-      </div>
-    </header>
   );
 }
 
@@ -56,7 +42,7 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <Header />
+      <Header data={data}/>
     </div>
   );
 }
