@@ -10,6 +10,18 @@
   color: #ff1515;
 }
 
+.Description section {
+  margin-top: 4rem;
+}
+
+.Description section h2 {
+  text-align: left;
+}
+
+.Description h3 {
+  margin-bottom: 2rem;
+}
+
 .Description a {
   padding: 1rem;
   background-color: #e99b5a;

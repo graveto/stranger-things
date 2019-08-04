@@ -3,7 +3,6 @@ import Description from "../description/description.component";
 import "./header.styles.css";
 
 const Header = (props) => {
-    console.log(props);
     return (
       <header className="App-header">
         <div>
