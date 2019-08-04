@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 import "./App.css";
 import EpisodeList from "./components/episode-list/episode-list.component";
-import Header from "./components/header/header.component.jsx";
+import Header from "./components/header/header.component";
+import LanguageSwitcher from "./components/language-switcher/language-switcher.component";
 
 import data1 from "./data/en_US.json";
 //import data2 from "./data/la_PG.json";
@@ -45,6 +46,7 @@ function Navbar() {
           <Link to="/gallery">Gallery</Link>
         </li>
       </ul>
+      <LanguageSwitcher />
     </div>
   );
 }

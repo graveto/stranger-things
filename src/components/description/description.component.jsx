@@ -21,7 +21,7 @@ const Description = props => {
       </a>
       <section>
         <div>
-          <h2>What's the Deal?</h2>
+          <h2>What's the Big Deal?</h2>
           <p>{props.data.snippets[1]}</p>
           <p>{props.data.snippets[2]}</p>
         </div>
