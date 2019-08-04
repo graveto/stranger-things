@@ -12,7 +12,7 @@ const Header = (props) => {
           </h2>
         </div>
         <div>
-          <Description>{props.data.description}</Description>
+          <Description data={props.data}></Description>
         </div>
       </header>
     );
