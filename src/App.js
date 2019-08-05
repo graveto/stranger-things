@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 import "./App.css";
 import EpisodeList from "./components/episode-list/episode-list.component";
 import Header from "./components/header/header.component";
-import LanguageSwitcher from "./components/language-switcher/language-switcher.component";
 
-import data1 from "./data/en_US.json";
-//import data2 from "./data/la_PG.json";
+import en_US from "./data/en_US.json";
+import la_PG from "./data/la_PG.json";
 
-let data = data1;
+let languageList = [
+  {id: 1, name: "en_US", displayName: "English", data: en_US},
+  {id: 2, name: "la_PG", displayName: "Upsidedownerish", data: la_PG}
+];
 
 function App() {
   return (
@@ -24,6 +26,14 @@ function App() {
 }
 
 function Navbar() {
+  const initialLanguage = () => window.localStorage.getItem("data") || "en_US"
+  const  [language, setLanguage] = useState(initialLanguage); 
+  const selectLanguage = (lang) => setLanguage(lang);
+
+  useEffect(() => {
+    window.localStorage.setItem("data", language);
+  }, [language]);
+
   return (
     <div className="navbar">
       <ul>
@@ -46,35 +56,54 @@ function Navbar() {
           <Link to="/gallery">Gallery</Link>
         </li>
       </ul>
-      <LanguageSwitcher />
+      <p>You switched language to: {language}</p>
+      <select onChange={(event) => selectLanguage(event.target.value)}>
+        {languageList.map(language => (
+          <option key={language.id} value={language.name}>
+            {language.displayName}
+          </option>
+        ))}
+      </select>      
     </div>
   );
 }
 
 function Home() {
+  const [data, setLanguage] = useState(window.localStorage.getItem("data"));
+  const selectLanguage = (lang) => setLanguage(lang);
+
+  
   return (
     <div>
       <Navbar />
-      <Header data={data} />
+      <Header data={languageList.filter((language) => {
+        return language.name === window.localStorage.getItem("data");
+      })[0]["data"]} />
     </div>
   );
 }
 
 function PopularEpisodes() {
+  const [data] = useState(window.localStorage.getItem("data"));
   return (
     <div>
       <Navbar />
-      <EpisodeList episodes={data["episode-list"]} />
+      <EpisodeList episodes={languageList.filter((language) => {
+        return language.name === window.localStorage.getItem("data");
+      })[0]["data"]["episode-list"]} />
     </div>
   );
 }
 
 function Gallery() {
+  const [data] = useState(window.localStorage.getItem("data"));
   return (
     <div>
       <Navbar />
       <Carousel>
-        {data.gallery.map((img, index) => (
+        {languageList.filter((language) => {
+          return language.name === window.localStorage.getItem("data");
+        })[0]["data"].gallery.map((img, index) => (
           <Carousel.Item>
             <img className="d-block w-100" src={img.src} alt={img.text} />
             <Carousel.Caption>
