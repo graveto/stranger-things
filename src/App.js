@@ -69,42 +69,41 @@ function Navbar() {
 }
 
 function Home() {
-  const [data, setLanguage] = useState(window.localStorage.getItem("data"));
+  const [data, setLanguage] = useState(window.localStorage.getItem("data") || "en_US");
   const selectLanguage = (lang) => setLanguage(lang);
-
   
   return (
     <div>
       <Navbar />
       <Header data={languageList.filter((language) => {
-        return language.name === window.localStorage.getItem("data");
+        return language.name === data;
       })[0]["data"]} />
     </div>
   );
 }
 
 function PopularEpisodes() {
-  const [data] = useState(window.localStorage.getItem("data"));
+  const [data] = useState(window.localStorage.getItem("data") || "en_US");
   return (
     <div>
       <Navbar />
       <EpisodeList episodes={languageList.filter((language) => {
-        return language.name === window.localStorage.getItem("data");
+        return language.name === data;
       })[0]["data"]["episode-list"]} />
     </div>
   );
 }
 
 function Gallery() {
-  const [data] = useState(window.localStorage.getItem("data"));
+  const [data] = useState(window.localStorage.getItem("data") || "en_US");
   return (
     <div>
       <Navbar />
       <Carousel>
         {languageList.filter((language) => {
-          return language.name === window.localStorage.getItem("data");
+          return language.name === data;
         })[0]["data"].gallery.map((img, index) => (
-          <Carousel.Item>
+          <Carousel.Item key={index}>
             <img className="d-block w-100" src={img.src} alt={img.text} />
             <Carousel.Caption>
               <h3>{img.text}</h3>
