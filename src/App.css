@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,900i&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,900i&display=swap");
 
-html { 
-  background: url(./images/rtp.jpg) no-repeat center center fixed; 
+html {
+  background: url(./images/rtp.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -12,48 +12,40 @@ body {
   background-color: rgba(25, 25, 25, 0.4);
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 .App {
   text-align: center;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .App .navbar {
   padding-left: 50px;
   text-align: left;
   background-color: rgba(255, 255, 255, 0.7);
-  border-bottom: 1px solid #FF1515;
+  border-bottom: 1px solid #ff1515;
 }
 
 .App .navbar ul {
   margin: 0;
   padding: 0;
   list-style: none;
-  display: table;  
 }
 
 .App .navbar ul li {
-  display: table-cell; 
-  position: relative; 
+  display: inline-block;
+  position: relative;
   padding: 2rem 0;
 }
 
 .App .navbar ul li a {
   text-decoration: none;
-  color: #FF1515;
+  color: #ff1515;
   font-size: 1.5rem;
   letter-spacing: 0.15em;
-  display: inline-block;
   padding: 1rem 1.5rem;
   position: relative;
 }
 
-.App .navbar ul li a:after {    
+.App .navbar ul li a:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
   content: "";
@@ -61,25 +53,31 @@ body {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #FF1515;
+  background: #ff1515;
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0;
 }
-.App .navbar ul li a:hover:after { 
-  width: 100%; 
-  left: 0; 
+.App .navbar ul li a:hover:after {
+  width: 100%;
+  left: 0;
 }
 
 .App img {
-  width:600px;
-  height:600px;
-  object-fit:scale-down;
+  width: 37.5rem;
+  height: 37.5rem;
+  object-fit: scale-down;
 }
 
+@media only screen and (max-width: 37.5rem) {
+  .App .navbar ul li {
+    padding: 0rem;
+    display: block;
+  }
 
-
-
-
-
-
+  .App .navbar ul li a {
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    padding: 0rem;
+  }
+}
 
